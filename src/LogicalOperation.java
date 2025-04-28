@@ -150,9 +150,9 @@ public class LogicalOperation {
         // a = a + 2;
         // System.out.println(a);
 
-        String test1="I am";
-        test1=test1+" a student";
-        System.out.println(test1);
+        //String test1="I am";
+        //test1=test1+" a student";
+        //System.out.println(test1);
 
         /*
          * -= : 減法後再賦值

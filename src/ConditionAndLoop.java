@@ -9,14 +9,26 @@ public class ConditionAndLoop {
          *     條件不成立時執行的程式碼
          * }
          */
-        // int a = 2;
-        // int b = 3;
+         int a = 2;
+         int b = 3;
 
-        // if((a <= b)) {
-        //     System.out.println("a 的確 <= b");
-        // } else {
-        //     System.out.println("a 沒有 <= b");
-        // }
+         /* if((a <= b)) {
+             System.out.println("a 的確 <= b");
+         } else {
+             System.out.println("a 沒有 <= b");
+         } */
+
+         if((a == 2) && (b == 5)) {
+            System.out.println("條件成立");
+        } else {
+            System.out.println("條件不成立");
+        }
+
+        if((a == 3) || (b == 5)) {
+            System.out.println("條件成立");
+        } else {
+            System.out.println("條件不成立");
+        }
 
         /*
          * else if
