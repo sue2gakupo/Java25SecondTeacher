@@ -3,9 +3,9 @@ public class LogicalOperation {
         /*
          * 基本運算邏輯
          */
-        
+
         /*
-         *  + : 加法
+         * + : 加法
          */
         // int a = 5;
         // int b = 12;
@@ -13,7 +13,7 @@ public class LogicalOperation {
         // System.out.println(sum);
 
         /*
-         *  - : 減法
+         * - : 減法
          */
         // int a = 5;
         // int b = 12;
@@ -25,7 +25,7 @@ public class LogicalOperation {
         // System.out.println(diff2);
 
         /*
-         *  * : 乘法
+         * * : 乘法
          */
         // int a = 5;
         // int b = 12;
@@ -33,19 +33,19 @@ public class LogicalOperation {
         // System.out.println(product);
 
         /*
-         *  / : 除法
+         * / : 除法(分母不能為0, 否則會報錯)
          */
         // int a = 5;
         // int b = 12;
 
-        // double quotiend1  = a / b;
+        // double quotiend1 = a / b;
         // System.out.println(quotiend1);
 
-        // double quotiend2  = b / a;
+        // double quotiend2 = b / a;
         // System.out.println(quotiend2);
 
         /*
-         *  % : 餘數
+         * % : 餘數
          */
         // int a = 15;
         // int b = 4;
@@ -53,9 +53,8 @@ public class LogicalOperation {
         // int remainder = a % b;
         // System.out.println(remainder);
 
-        
         /*
-         *  == : 等於
+         * == : 等於
          */
         // int a = 5;
         // int b = 12;
@@ -63,9 +62,8 @@ public class LogicalOperation {
         // boolean isEqual = (a == b);
         // System.out.println(isEqual);
 
-
         /*
-         *  != : 不等於
+         * != : 不等於
          */
         // int a = 5;
         // int b = 12;
@@ -73,9 +71,8 @@ public class LogicalOperation {
         // boolean isNotEqual = (a != b);
         // System.out.println(isNotEqual);
 
-
         /*
-         *  > : 大於
+         * > : 大於
          */
         // int a = 5;
         // int b = 12;
@@ -83,76 +80,86 @@ public class LogicalOperation {
         // boolean greaterThen = (a > b);
         // System.out.println(greaterThen);
 
-
         /*
-        *  < : 小於
-        */
+         * < : 小於
+         */
         // int a = 5;
         // int b = 12;
 
         // boolean lessThen = (a < b);
         // System.out.println(lessThen);
 
+        /*
+         * >= : 大於或等於(其中一個成立即可)
+         * 例如: 5 >= 5, 5 >= 4, 4 >= 4, 4 >= 3 都成立
+         */
+        // boolean greaterThenOrEqual = (a >= b);
+        // System.out.println(greaterThenOrEqual);
 
         /*
-         *  >= : 大於或等於
-         */
-        //  boolean greaterThenOrEqual = (a >= b);
-        //  System.out.println(greaterThenOrEqual);
- 
-        /*
-         *  <= : 小於或等於
+         * <= : 小於或等於
          */
         // boolean lessThenOrEqual = (a <= b);
-        //  System.out.println(lessThenOrEqual);
-
+        // System.out.println(lessThenOrEqual);
 
         /*
-         *  && : 並且
+         * && : 並且(兩個條件都成立才會成立)
          */
-        // boolean and = (a < b) && (b > a);
+        // int a = 2;
+        // int b = 5;
+        // boolean and = (a == 2) && (b == 5);
         // System.out.println(and);
 
         /*
-         *  || : 或者
+         * || : 或者
          */
-        // boolean or = (a < b) || (b < a);
+        // int a = 2;
+        // int b = 5;
+        // boolean or = (a == 3) || (b == 5);
         // System.out.println(or);
 
         /*
-         *  !  : 反轉
+         * ! : 反轉(把true變成false, false變成true)
          */
+        // int a = 2;
+        // int b = 5;
         // boolean not = !(a < b);
         // System.out.println(not);
 
         /*
-         *  ++ : 自增1
+         * ++ : 自增1
          */
         // int a = 5;
+        // a = a + 1;
         // a++;
         // System.out.println(a);
 
         /*
-         *  -- : 自減1
+         * -- : 自減1
          */
         // int a = 5;
+        // a = a - 1;
         // a--;
         // System.out.println(a);
 
         /*
-         *  += : 加法後再賦值
+         * += : 加法後再賦值
          */
         // int a = 5;
         // a += 2;
+        // a = a + 2;
         // System.out.println(a);
 
+        String test1="I am";
+        test1=test1+" a student";
+        System.out.println(test1);
+
         /*
-         *  -= : 減法後再賦值
+         * -= : 減法後再賦值
          */
         // int a = 5;
         // a -= 2;
         // System.out.println(a);
-
 
     }
 }
