@@ -1,7 +1,7 @@
 public class BasicDeclare {
     public static void main(String[] args) throws Exception {
         /*
-         * 基本型別介紹
+         * 基本型別(primitive data types)介紹
          * int: 整數, 範圍: -2,147,483,648 ~ 2,147,483,647
          *
          * byte: 整數, 範圍: -128 ~ 127

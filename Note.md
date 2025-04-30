@@ -211,9 +211,9 @@ boolean 型態可表示 true 與 false，分別代表邏輯的「真」與「假
 - 降低從一個開發階段過渡到另一個開發階段的複雜性。
 
 特性:
-- 封裝（Encapsulation）
+- 封裝（Encapsulation）設定權限
 - 繼承（Inheritance）
-  - 覆寫(Override)
+- 覆寫(Override)
 - 多型 (Polymorphism)
 - 多載（Overloading)
 
