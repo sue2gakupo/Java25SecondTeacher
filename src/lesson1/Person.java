@@ -1,3 +1,4 @@
+package lesson1;
 //類別
 
 public class Person {

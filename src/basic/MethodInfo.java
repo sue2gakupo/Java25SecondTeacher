@@ -1,3 +1,4 @@
+package basic;
 public class MethodInfo {
     public static void main(String[] args) throws Exception {
         // 沒有輸入參數 ＆ 沒有回傳值
