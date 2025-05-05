@@ -1,171 +1,191 @@
 package lesson1;
 
-import javax.imageio.plugins.tiff.ExifTIFFTagSet;
-
 import lesson1.homework.traning.Employee;
 
 public class DemoCLass {
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        // 另開一個檔案為程式進入點，繼承也是開另一個檔案，開頭"main"的意思為程式進入點，
-        // 另一個檔案的屬性、建構子、方法可以在main經由程式導入
+    // 另開一個檔案為程式進入點，繼承也是開另一個檔案，開頭"main"的意思為程式進入點，
+    // 另一個檔案的屬性、建構子、方法可以在main經由程式導入
 
-        /*
-         * 類別實作
-         * car1是實作的物件 型別為Car型別為Car
-         */
-        /*
-         * Car car1 = new Car("001", "blue");
-         * car1.showCarInfo();
-         * car1.color = "blue"; // 直接改變屬性值
-         * car1.number = "001"; // 直接改變屬性值
-         * car1.showCarInfo(); // 呼叫方法
-         * 
-         * Car car2 = new Car("002", "red");
-         * car2.showCarInfo();
-         * 
-         * // 「臨時物件（anonymous object）+ 馬上呼叫方法」適用
-         * new Car("003", "yellow").showCarInfo()
-         */;
+    /*
+     * 類別實作
+     * car1是實作的物件 型別為Car型別為Car
+     */
 
-        /*
-         * for(int carIndex=1;carIndex<=10;carIndex++){
-         * String carName
-         * System.out.println(carIndex);
-         * }
-         */
+    Car c1 = new Car("001", "blue");
+    c1.showCarInfo();
+    c1.color = "red"; // 覆寫屬性值color
+    c1.number = "002"; // 覆寫屬性值number
+    c1.showCarInfo(); // 呼叫方法
 
-        /*
-         * 課間練習
-         * 建立類別Person
-         * 屬性：name, age
-         * 方法：showName(),showAge()
-         * 實作兩個person
-         */
-        // Person p1 = new Person("Sue", "17");
-        // p1.showPersonInfo();
+    Car car2 = new Car("002", "red");
+    car2.showCarInfo();
 
-        // Person p2=new Person("Tom","20");
-        // p2.showPersonInfo();
+    // 「臨時物件（anonymous object）+ 馬上呼叫方法」適用
+    new Car("003", "yellow").showCarInfo();
 
-        // new Person("Chris","45").showPersonInfo();
+    /*
+     * for(int carIndex=1;carIndex<=10;carIndex++){
+     * String carName
+     * System.out.println(carIndex);
+     * }
+     */
 
-        // new Person("Knife","100").showPersonInfo();
+    /*
+     * 課間練習
+     * 建立類別Person
+     * 屬性：name, age
+     * 方法：showName(),showAge()
+     * 實作兩個person
+     */
+    // Person p1 = new Person("Sue", "17");
+    // p1.showPersonInfo();
 
-        // System.out.println("schoolName：" + Person.schoolName);
-        // Person p3=new Person();
+    // Person p2=new Person("Tom","20");
+    // p2.showPersonInfo();
 
-        /*
-         * 課間練習
-         * 設計衣服(Cloth)類別
-         * 顏色(color)尺寸(size) logo
-         * 用非建構子的方式直接設定值 印出logo color size等資訊
-         */
+    // new Person("Chris","45").showPersonInfo();
 
-        // 實體化
-        // 1.用建構子初始化物件屬性(寫new Cloth()的時候會自動呼叫建構子)
-        /*
-         * Cloth c1 = new Cloth("Nike", "white", "XL");
-         * c1.showInfo();
-         * c1.size = "L"; // 直接改變屬性值
-         * c1.showInfo();
-         * c1.color = "black";
-         * c1.showInfo();
-         * System.out.println(c1.color); //可以直接印出單個屬性值
-         */
+    // new Person("Knife","100").showPersonInfo();
 
-        // 2.用非建構子
+    // System.out.println("schoolName：" + Person.schoolName);
+    // Person p3=new Person();
 
-        /*
-         * Cloth c2 = new Cloth();
-         * c2.logo="Adidas";
-         * c2.color="red";
-         * c2.size="M";
-         * c2.showInfo();
-         */
+    /*
+     * 課間練習
+     * 設計衣服(Cloth)類別
+     * 顏色(color)尺寸(size) logo
+     * 用非建構子的方式直接設定值 印出logo color size等資訊
+     */
 
-        /*
-         * Bank實體化
-         * 封裝練習 Getter*Setter
-         */
+    // 實體化
+    // 1.用建構子初始化物件屬性(寫new Cloth()的時候會自動呼叫建構子)
+    /*
+     * Cloth c1 = new Cloth("Nike", "white", "XL");
+     * c1.showInfo();
+     * c1.size = "L"; // 直接改變屬性值
+     * c1.showInfo();
+     * c1.color = "black";
+     * c1.showInfo();
+     * System.out.println(c1.color); //可以直接印出單個屬性值
+     */
 
-        // 開戶並且存款1000
-        /*
-         * Bank b1 = new Bank("Duu", "1000");
-         * b1.showBalance();
-         * 
-         * // 顯示帳戶與餘額，透過窗口
-         * b1.setBalance1(5000);
-         * int myBalance = b1.getBalance1();
-         * System.out.println("存錢後的餘額" + myBalance);
-         * 
-         * b1.setBalance1(5000);
-         * int myBalance1 = b1.getBalance1();
-         * System.out.println("存錢後的餘額" + myBalance);
-         * 
-         * 
-         * }
-         * 
-         * /*
-         * 課程練習
-         * 修改可以變更account
-         * 注意需比對原帳號，正確才能修正
-         * 改完帳號後分別用新舊帳號存錢/提領
-         */
+    // 2.用非建構子
 
-        /*
-         * 命名一個類別student
-         * 兩個私有屬性 name score
-         * 用getter setter 存取name跟score
-         * setScore 內要檢查 數入的score為0~100間
-         * 不在此範圍需跳出回應"分數在0~100之間"
-         */
+    /*
+     * Cloth c2 = new Cloth();
+     * c2.logo="Adidas";
+     * c2.color="red";
+     * c2.size="M";
+     * c2.showInfo();
+     */
 
-        Student s1 = new Student();
-        s1.setName("Tom");
-        s1.setScore(101);
-        System.out.println(s1.getName() + "分數" + s1.getScore());
+    /*
+     * Bank實體化
+     * 封裝練習 Getter*Setter
+     */
 
-        s1.setScore(80);
-        System.out.println(s1.getName() + "修改成功之分數" + s1.getScore());
+    // 開戶並且存款1000
+    Bank b1 = new Bank("123456789", 1000);
+    // 顯示帳戶與餘額
 
-        /*
-         * 多載介紹(Overload)
-         */
+    b1.showBalance();
 
-        // Printer p1 = new Printer();
-        // p1.show();
-        // p1.show(101);
-        // p1.show("1");
-        // p1.show("2", "2");
-        // p1.show("good", 15);
+    // 顯示帳戶與餘額
+    b1.setBalance1("sue", "deposit", 1000);
+    int myBalance01 = b1.getBalance1();
+    System.out.println("存錢後的餘額" + myBalance01);
 
-        /*
-         * 課堂練習:
-         * 產生一個Area類別
-         * 產生Method 名稱為cal()
-         * 分別產生圓形、長方形、三角形面積計算
-         */
+    b1.setBalance1("sue", "withdraw", 5000);
+    int myBalance02 = b1.getBalance1();
+    System.out.println("存錢後的餘額" + myBalance02);
 
-        // Area a1=new Area();
-        // a1.show(2);
-        // a1.show(45, 3);
-        // a1.show(2, 3 );
+    /*
+     * 課程練習
+     * 修改可以變更account
+     * 注意需比對原帳號，正確才能修正
+     * 改完帳號後分別用新舊帳號存錢/提領
+     */
 
-        /*
-         * package呼叫：import很重要
-         */
+    /*
+     * 命名一個類別student
+     * 兩個私有屬性 name score
+     * 用getter setter 存取name跟score
+     * setScore 內要檢查 數入的score為0~100間
+     * 不在此範圍需跳出回應"分數在0~100之間"
+     */
 
-        /*
-         * 課堂練習:
-         * 產生一個lesson1產生以下路徑資料夾lesson1>homework>traning
-         * 在training內放Employee類別
-         * Employee 請用getter setter存取name
-         * 最後在DemoClass實做一個Employee物件且印出getName()
-         */
-        lesson1.homework.traning.Employee e1 = new lesson1.homework.traning.Employee("Evan");
-        System.out.println("Evan");
+    // Student s1 = new Student();
+    // s1.setName("Tom");
+    // s1.setScore(101);
+    // System.out.println(s1.getName() + "分數" + s1.getScore());
 
-    }
+    // s1.setScore(80);
+    // System.out.println(s1.getName() + "修改成功之分數" + s1.getScore());
+
+    /*
+     * 命名一個類別Teacher
+     * 三個私有屬性 score1、score2、teacherAccount
+     * 用getter setter 存取score1、score2
+     * score1、score2內要檢查teacherAccount是否為初始化建構子輸入的帳號
+     * 確認正確才能繼續寫入score1、score2
+     * score1、score2 內要檢查 數入的score為0~100間才能寫入
+     * 不在此範圍需跳出回應"分數在0~100之間"
+     */
+
+    Teacher t1 = new Teacher("Shu");
+
+    // 假設老師帳號輸入錯誤
+    t1.setScore1("Luca", 90);
+    int score00 = t1.getScore1("Shu");
+    System.out.println("國文:" + score00);
+    // 假設老師帳號輸入正確
+    t1.setScore1("Shu", 55);
+    int score01 = t1.getScore1("Shu");
+    System.out.println("國文:" + score01);
+    // 假設老師帳號輸入正確，但分數錯誤
+    t1.setScore2("Shu", 101);
+    int score02 = t1.getScore2("Shu");
+    System.out.println("數學:" + score02);
+
+    /*
+     * 多載介紹(Overload)
+     */
+
+    // Printer p1 = new Printer();
+    // p1.show();
+    // p1.show(101);
+    // p1.show("1");
+    // p1.show("2", "2");
+    // p1.show("good", 15);
+
+    /*
+     * 課堂練習:
+     * 產生一個Area類別
+     * 產生Method 名稱為cal()
+     * 分別產生圓形、長方形、三角形面積計算
+     */
+
+    // Area a1=new Area();
+    // a1.show(2);
+    // a1.show(45, 3);
+    // a1.show(2, 3 );
+
+    /*
+     * package呼叫：import很重要
+     */
+
+    /*
+     * 課堂練習:
+     * 產生一個lesson1產生以下路徑資料夾lesson1>homework>traning
+     * 在training內放Employee類別
+     * Employee 請用getter setter存取name
+     * 最後在DemoClass實做一個Employee物件且印出getName()
+     */
+    Employee e1 = new lesson1.homework.traning.Employee("Evan");
+    System.out.println("Employee Name:" + e1.getName());
+
+  }
 
 }
